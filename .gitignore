@@ -1,0 +1,7 @@
+node_modules/*
+*.bat
+.vscode
+*.psd
+jsconfig.json
+typings
+ssl

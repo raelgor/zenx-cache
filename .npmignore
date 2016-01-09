@@ -1,0 +1,8 @@
+*.bat
+.git
+node_modules
+.vscode
+*.psd
+jsconfig.json
+typings
+ssl

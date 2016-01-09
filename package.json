@@ -1,0 +1,22 @@
+{
+  "name": "zenx-cache",
+  "version": "0.0.1",
+  "description": "A small mongodb cache.",
+  "homepage": "https://zenxplatform.com/",
+  "icon": "http://tournouatichu.com/logolight.png",
+  "license": "MIT",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raelgor/zenx-server.git"
+  },
+  "dependencies": {
+    "zenx-util": "latest",
+    "zenx-server": "latest"
+  },
+  "author": {
+    "name": "Kosmas Papadatos",
+    "email": "kosmas.papadatos@gmail.com",
+    "url": "https://plus.google.com/+KosmasPapadatos"
+  }
+}
