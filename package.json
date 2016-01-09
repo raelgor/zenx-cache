@@ -11,8 +11,10 @@
     "url": "https://github.com/raelgor/zenx-server.git"
   },
   "dependencies": {
-    "zenx-util": "latest",
-    "zenx-server": "latest"
+    "co": "^4.6.0",
+    "mz": "^2.1.0",
+    "zenx-server": "latest",
+    "zenx-util": "latest"
   },
   "author": {
     "name": "Kosmas Papadatos",
