@@ -8,7 +8,7 @@ A tiny caching server used by the [ZenX](https://github.com/raelgor/zenx) projec
   * [Event: 'connected'](#zccec)
   * [Event: 'disconnected'](#zccedc)
   * [client.get(options)](#zccg)
-  * [client.upsert(options)](#zccu)
+  * [client.update(options)](#zccu)
   * [client.remove(options)](#zccr)
 * [Class: ZenXCacheServer](#zcs)
   * [Event: 'listening'](#zcsel)
@@ -33,16 +33,16 @@ Configuration:
 * `defaultTable`: Alias for `defaultCollection`.
 
 ### <a name="zccee">Event: 'error'</a>
-`function(error) {}`
+`function(error) { }`
 
 Emitted when the client receives an error message from the server or a request fails.
 
 ### <a name="zccec">Event: 'connected'</a>
-`function() {}`
+`function() { }`
 
 Emitted when the client manages to connect or reconnect to the cache server.
 
 ### <a name="zccedc">Event: 'disconnected'</a>
-`function() {}`
+`function() { }`
 
 Emitted when a request fails. The client will not attempt any more requests until reconnected.
