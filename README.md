@@ -3,14 +3,14 @@ A tiny caching server used by the [ZenX](https://github.com/raelgor/zenx) projec
 
 ## Manual
 * [Installation](#installation)
-* [Class: cache.ZenXCacheClient](#zcc)
+* [Class: cache.Client](#zcc)
   * [Event: 'error'](#zccee)
   * [Event: 'connected'](#zccec)
   * [Event: 'disconnected'](#zccedc)
   * [client.get(options)](#zccg)
   * [client.update(options)](#zccu)
   * [client.remove(options)](#zccr)
-* [Class: cache.ZenXCacheServer](#zcs)
+* [Class: cache.Server](#zcs)
   * [Event: 'listening'](#zcsel)
   * [Event: 'close'](#zcsec)
 
@@ -19,8 +19,8 @@ A tiny caching server used by the [ZenX](https://github.com/raelgor/zenx) projec
 npm i --save zenx-cache
 ```
 
-### <a name="zcc">Class: cache.ZenXCacheClient</a>
-A `ZenXCacheClient` takes in a `configuration` object and connects to a `ZenXCacheServer`.
+### <a name="zcc">Class: cache.Client</a>
+A `cache.Client` takes in a `configuration` object and connects to a `cache.Server`.
 ```js
 var cacheClient = new require('zenx-cache').Client(configuration);
 ```
