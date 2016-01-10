@@ -16,6 +16,7 @@ A tiny caching server used by the [ZenX](https://github.com/raelgor/zenx) projec
 * [Class: cache.Server](#zcs)
   * [Event: 'listening'](#zcsel)
   * [Event: 'close'](#zcsec)
+* [Contribute](#contribute)
 
 ### <a name="installation">Installation</a>
 This module uses `class`es, speading, `let`, generators etc. so depenging on your Node version you may need `--harmony` or `--es_staging`.
@@ -93,6 +94,12 @@ Returns `undefined` and synchronously disconnects the client, firing a [`disconn
 ### <a name="zccs">client.STATUS</a>
 
 Is either `1` or `0` representing the `connected` and `disconnected` states respectively.
+
+### Contribute
+Here's an abstract list of TODOs if you want to contribute:
+* Make it clustered
+* Integrate pub/sub
+* Add MySQL support
 
 ### License
 (The MIT License)
