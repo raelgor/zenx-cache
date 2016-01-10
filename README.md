@@ -50,7 +50,7 @@ Emitted when the client manages to connect or reconnect to the cache server.
 
 Emitted when a request fails. The client will not attempt any more requests until reconnected.
 
-### <a name="zcccg">client.get(options)</a>
+### <a name="zccg">client.get(options)</a>
 
 Returns a `Promise` that resolves when a response is received and parsed or when an error occurs in the process.
 
@@ -60,7 +60,7 @@ Options:
 * `collection`: The collection to query. If unspecified, the `configuration.defaultCollection` name will be used.
 * `options`: Extra options like MongoDB's `skip` and `limit`. These values will be added to the query's identifier.
 
-### <a name="zcccu">client.update(options)</a>
+### <a name="zccu">client.update(options)</a>
 
 Returns a `Promise` that resolves when a response is received and parsed or when an error occurs in the process.
 
@@ -71,7 +71,7 @@ Options:
 * `collection`: The collection to query. If unspecified, the `configuration.defaultCollection` name will be used.
 * `options`: Extra options like MongoDB's `upsert` and `multi`.
 
-### <a name="zcccr">client.remove(options)</a>
+### <a name="zccr">client.remove(options)</a>
 
 Returns a `Promise` that resolves when a response is received and parsed or when an error occurs in the process.
 
