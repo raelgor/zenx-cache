@@ -100,6 +100,7 @@ Here's an abstract list of TODOs if you want to contribute:
 * Make it clustered
 * Integrate pub/sub
 * Add MySQL support
+* Replace `co` with custom generator runner
 
 ### License
 (The MIT License)
