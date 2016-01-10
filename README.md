@@ -10,6 +10,9 @@ A tiny caching server used by the [ZenX](https://github.com/raelgor/zenx) projec
   * [client.get(options)](#zccg)
   * [client.update(options)](#zccu)
   * [client.remove(options)](#zccr)
+  * [client.connect()](#zcccon)
+  * [client.disconnect()](#zccdiscon)
+  * [client.STATUS](#zccs)
 * [Class: cache.Server](#zcs)
   * [Event: 'listening'](#zcsel)
   * [Event: 'close'](#zcsec)
@@ -46,6 +49,49 @@ Emitted when the client manages to connect or reconnect to the cache server.
 `function() { }`
 
 Emitted when a request fails. The client will not attempt any more requests until reconnected.
+
+### <a name="zcccg">client.get(options)</a>
+
+Returns a `Promise` that resolves when a response is received and parsed or when an error occurs in the process.
+
+Options:
+* `query`: An object representing the MongoDB query.
+* `database`: The database to be used. If unspecified, the `configuration.defaultDatabase` name will be used.
+* `collection`: The collection to query. If unspecified, the `configuration.defaultCollection` name will be used.
+* `options`: Extra options like MongoDB's `skip` and `limit`. These values will be added to the query's identifier.
+
+### <a name="zcccu">client.update(options)</a>
+
+Returns a `Promise` that resolves when a response is received and parsed or when an error occurs in the process.
+
+Options:
+* `query`: An object representing the MongoDB query.
+* `update`: An object representing MongoDB's update. (e.g. `{ $set: { name: 'john' } }`)
+* `database`: The database to be used. If unspecified, the `configuration.defaultDatabase` name will be used.
+* `collection`: The collection to query. If unspecified, the `configuration.defaultCollection` name will be used.
+* `options`: Extra options like MongoDB's `upsert` and `multi`.
+
+### <a name="zcccr">client.remove(options)</a>
+
+Returns a `Promise` that resolves when a response is received and parsed or when an error occurs in the process.
+
+Options:
+* `query`: An object representing the MongoDB query.
+* `database`: The database to be used. If unspecified, the `configuration.defaultDatabase` name will be used.
+* `collection`: The collection to query. If unspecified, the `configuration.defaultCollection` name will be used.
+* `options`: Extra options like MongoDB's `multi`.
+
+### <a name="zcccon">client.connect()</a>
+
+Returns a `Promise` that resolves on the first [`error`](#zccee) or [`connect`](#zccec) event that fires.
+
+### <a name="zccdiscon">client.disconnect()</a>
+
+Returns `undefined` and synchronously disconnects the client, firing a [`disconnect`](#zccedc) event
+
+### <a name="zccs">client.STATUS</a>
+
+Is either `1` or `0` representing the `connected` and `disconnected` states respectively.
 
 ### License
 (The MIT License)
