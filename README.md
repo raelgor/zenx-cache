@@ -19,7 +19,7 @@ A tiny caching server used by the [ZenX](https://github.com/raelgor/zenx) projec
 * [Contribute](#contribute)
 
 ### <a name="installation">Installation</a>
-This module uses `class`es, spreading, `let`, generators etc. so depenging on your Node version you may need `--harmony` or `--es_staging`.
+This module uses `class`es, spreading, `let`, generators etc. so depending on your Node version you may need `--harmony` or `--es_staging`.
 ```shell
 npm i --save zenx-cache
 ```
