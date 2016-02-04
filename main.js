@@ -1,10 +1,10 @@
-// ZenX cache classes
+// Cache classes
 module.exports = {
 	
-	// ZenXCacheClient class
+	// Client class
 	Client: require('./src/client/client'),
 	
-	// ZenXCacheServer class
+	// Server class
 	Server: require('./src/server/server')
 	
 }

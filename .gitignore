@@ -5,3 +5,5 @@ node_modules/*
 jsconfig.json
 typings
 ssl
+config.js
+config.json

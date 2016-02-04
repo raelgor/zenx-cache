@@ -1,24 +1,28 @@
 {
   "name": "zenx-cache",
-  "version": "0.0.1",
-  "description": "A small mongodb cache.",
-  "homepage": "https://zenxplatform.com/",
+  "version": "0.1.1",
+  "description": "A tiny caching server.",
   "icon": "http://tournouatichu.com/logolight.png",
   "license": "MIT",
   "main": "main.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/raelgor/zenx-server.git"
+    "url": "https://github.com/raelgor/zenx-cache.git"
   },
   "dependencies": {
     "co": "^4.6.0",
-    "mz": "^2.1.0",
-    "zenx-server": "latest",
-    "zenx-util": "latest"
+    "express": "^4.13.4",
+    "mongodb": "^2.1.4"
+  },
+  "scripts": {
+    "test": "mocha --es_staging"
   },
   "author": {
     "name": "Kosmas Papadatos",
     "email": "kosmas.papadatos@gmail.com",
     "url": "https://plus.google.com/+KosmasPapadatos"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.4"
   }
 }
