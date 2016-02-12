@@ -4,8 +4,6 @@ const log = (...args) => console.log(`[${new Date()}][${process.pid}] `, ...args
 
 var send = function(requestName, requestObject) {
     
-    log(`sending a ${requestName} request...`);
-    
     let fn = resolve => {
         
         requestObject.cmd = requestName;
@@ -13,7 +11,6 @@ var send = function(requestName, requestObject) {
         let requestDataAsString = JSON.stringify(requestObject) || '{}';
         
         let errorHandler = err => {
-            log(`error handler called for ${requestName} request...`, err);
             this._errorHandler(err);
             resolve({ error: err });
         }
@@ -41,7 +38,6 @@ var send = function(requestName, requestObject) {
         request.on('error', errorHandler);
         request.on('socket', socket => {
             socket.on('error', errorHandler);
-            log('send got a socket. errorHandler bound.');
         });
         
         request.write(requestDataAsString);
@@ -64,8 +60,6 @@ var parseResponse = text => {
     } catch(err) {
         data = { error: err };
     }
-    
-    log(`response received and parsed: `, data);
     
     return data;
     
