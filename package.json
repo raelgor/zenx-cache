@@ -1,6 +1,6 @@
 {
   "name": "zenx-cache",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A tiny caching server.",
   "icon": "http://tournouatichu.com/logolight.png",
   "license": "MIT",
